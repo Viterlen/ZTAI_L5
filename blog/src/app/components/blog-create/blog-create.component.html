@@ -1,0 +1,20 @@
+
+<div class="container-fluid">
+  <form class="custom-form" [formGroup]="profileForm" (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Tytuł</label>
+      <input type="text" class="form-control" id="title" placeholder="Tytuł" formControlName="title">
+      <div *ngIf="profileForm.get('title').touched && profileForm.get('title').invalid" class="alert alert-danger" required=""> Musisz podać tytuł</div>
+
+      <label for="url">Link do obrazka</label>
+      <input type="text" class="form-control" id="url" placeholder="Obrazek" formControlName="url">
+      <div *ngIf="profileForm.get('url').touched && profileForm.get('url').invalid" class="alert alert-danger" required=""> Musisz wstawić link do obrazka</div>
+
+      <label for="content">Treść</label>
+      <textarea class="form-control" rows="8" placeholder="Opis" id="content" required formControlName="content"></textarea>
+      <div *ngIf="profileForm.get('content').touched && profileForm.get('content').invalid" class="alert alert-danger" required=""> Musisz podać treść artykułu</div>
+    </div>
+    <button type="reset" class="btn btn-primary">Wyczyść</button>
+    <button type="submit" class="btn btn-primary" [disabled]="profileForm.invalid">Wyślij</button>
+  </form>
+</div>

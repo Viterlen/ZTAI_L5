@@ -1,0 +1,12 @@
+.custom-style-quiz{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.hidden{
+  display:none;
+}
+.result-text,#answer{
+  height:300px;
+}

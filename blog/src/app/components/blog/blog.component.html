@@ -1,0 +1,5 @@
+
+<div *ngFor="let article of articles$ | filter:filterText">
+  <app-blog-item [article]="article"></app-blog-item>
+</div>
+

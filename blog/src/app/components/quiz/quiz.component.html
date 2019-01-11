@@ -1,0 +1,39 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-offset-4 col-sm-4">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width:0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <hr>
+      <form name="question" class="custom-style-quiz" (submit)="printOut($event)">
+        <label id="question">QUESTION_TEMP</label>
+        <div class="answer">
+          <input type="checkbox" id="ans1" value="0" name="answer" onclick="set(0)">
+          <label for="ans1" id="ans0txt">ANS1_TEMP</label>
+        </div>
+        <div class="answer">
+          <input type="checkbox" id="ans2" value="1" name="answer" onclick="set(1)">
+          <label for="ans2" id="ans1txt">ANS2_TEMP</label>
+        </div>
+        <div class="answer">
+          <input type="checkbox" id="ans3" value="2" name="answer" onclick="set(2)">
+          <label for="ans3" id="ans2txt">ANS3_TEMP</label>
+        </div>
+        <div class="answer">
+          <input type="checkbox" id="ans4" value="3" name="answer" onclick="set(3)">
+          <label for="ans4" id="ans3txt">ANS4_TEMP</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Wyślij</button>
+      </form>
+
+    </div>
+    <div class="col-sm-offset-4 col-sm-4 results hidden">
+      <div>
+        <h2  class="result-text"></h2>
+      </div>
+      <button type="submit" class="btn btn-block btn-primary" (click)="retry()">Retry</button>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,8 @@
+.list-custom-style{
+  background-color: black;
+  flex-direction:row;
+  margin-bottom: 50px;
+}
+.list-custom-style>li{
+  min-width:10%;
+}

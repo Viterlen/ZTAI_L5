@@ -1,0 +1,4 @@
+<h4>{{article.title}}</h4>
+<app-blog-item-image [image]="article.url"></app-blog-item-image>
+<app-blog-item-text [text]="article.content | summary:90"></app-blog-item-text>
+<a routerLink="/blog/details/{{article.id}}">Read more</a>
