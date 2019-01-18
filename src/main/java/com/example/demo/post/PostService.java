@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.post;
 
 import org.springframework.stereotype.Service;
 
@@ -22,10 +22,10 @@ public class PostService {
         }
     }
 
-    List<Post> getAll(){
+    public List<Post> getAll(){
         return posts;
     }
-    Post get(int id){
+    public Post get(int id){
         return posts.get(id);
     }
 }

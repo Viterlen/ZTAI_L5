@@ -1,16 +1,12 @@
-<form action="post" autocomplete="off" method="POST">
-  <div class="input-group">
-    <input [(ngModel)]="credentials.login" type="text" class="form-control"
-           name="username" placeholder="Nazwa" title="Wprowadź login">
+<div class="container">
+  <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+
+  <div>
+    User Name : <input type="text" name="username" [(ngModel)]="username">
+    Password  : <input type="password" name="password" [(ngModel)]="password">
+
+
+    <button (click)=handleBasicAuthLogin() class="btn btn-success">Login</button>
+
   </div>
-
-  <div class="input-group">
-    <input [(ngModel)]="credentials.password" type="password" class="form-control"
-           name="password" placeholder="Hasło" title="Wprowadź hasło">
-  </div>
-
-  <button (click)="signIn()" class="btn btn-lg btn-pink btn-block" type="submit" title="Przycisk zaloguj">
-    Zaloguj
-  </button>
-</form>
-
+</div>
