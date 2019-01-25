@@ -12,16 +12,16 @@ export class PostServiceService {
   host:string;
   constructor(httpClient: HttpClient) {
     this.http=httpClient;
-    this.host="http://localhost:8080/api";
+    this.host="http://localhost:8080";
   }
 
   public getAll():any{
-    return this.http.get(this.host+"/posts");
+    return this.http.get(this.host+"/api/posts");
   }
   public getOne(id):any{
-    return this.http.get(this.host+"/posts/"+id);
+    return this.http.get(this.host+"/api/posts"+id);
   }
   public savePost(body):any{
-    return this.http.post(this.host+"/posts",body);
+    return this.http.post(this.host+"/api/posts",body);
   }
 }
