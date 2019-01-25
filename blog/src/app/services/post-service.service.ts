@@ -22,6 +22,6 @@ export class PostServiceService {
     return this.http.get(this.host+"/posts/"+id);
   }
   public savePost(body):any{
-    return this.http.post("/posts",body);
+    return this.http.post(this.host+"/posts",body);
   }
 }

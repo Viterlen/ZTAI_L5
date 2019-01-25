@@ -8,7 +8,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 @RestController
 public class PostResource{
 
@@ -29,7 +29,7 @@ public class PostResource{
     }
 
     @PostMapping("/api/posts")
-    public ResponseEntity<Void> createPost(@PathVariable Post post) {
+    public ResponseEntity<Void> createPost(@RequestBody Post post) {
         Post postUpdated = postRepository.save(post);
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()

@@ -21,8 +21,8 @@ export class BlogCreateComponent implements OnInit {
 
   }
   onSubmit(){
-    this.service.savePost(this.profileForm.value).subscribe(res=>{
-      console.log(res.data);
+    this.service.savePost(this.profileForm.value).subscribe(()=>{
+      console.log("Post saved!");
     });
   }
 
